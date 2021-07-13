@@ -1,0 +1,59 @@
+﻿{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0.1",
+    "id": "cf2ad919-6e25-4594-94b1-915e373c1068",
+    "packageName": "com.contoso.teamsauthsso",
+    "developer": {
+        "name": "Microsoft",
+        "websiteUrl": "https://www.microsoft.com",
+        "privacyUrl": "https://www.microsoft.com/privacy",
+        "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+    },
+    "name": {
+        "short": "ariel cookies",
+        "full": "this intern is working with cookies"
+    },
+    "description": {
+        "short": "aspires to be a working app",
+        "full": "is teams app studio not working with me cuz its monday?"
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#60A18E",
+    "staticTabs": [
+      {
+        "entityId": "auth",
+        "name": "Auth",
+        "contentUrl": "https://arielfu.ngrok.io/Home/index",
+        "scopes": [ "personal" ]
+
+      },
+      {
+        "entityId": "auth2",
+        "name": "Auth2",
+        "contentUrl": "https://arielfu.ngrok.io/Home/index",
+        "scopes": [ "personal" ]
+
+      }
+    ],
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://arielfu.ngrok.io/Home/Configure",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "permissions": [ "identity", "messageTeamMembers" ],
+    "validDomains": [
+        "arielfu.ngrok.io"
+    ],
+    "webApplicationInfo": {
+        "id": "2519715e-2bc3-4a2d-8dc3-539aa5fe198b",
+        "resource": "api://arielfu.ngrok.io/2519715e-2bc3-4a2d-8dc3-539aa5fe198b"
+    }
+}

@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+   
+    //string query = @Context.Request.Form["parseValue"];
+    //string formattedQuery = query.Replace(" ", "+");
+
+    //<text>
+      //  Is this working: <br />
+      //  Query: @query <br  />
+      //  Query replaced: @formattedQuery <br />
+    //</text>
+    
+}
+
+
+
+<!DOCTYPE html> 
+
+<style>
+      .context-menu{
+        position: fixed;
+        display: none;
+        width: 140px;
+        box-shadow: 2px 2px 9px #aaa;
+        overflow: hidden;
+        border:solid 1px #aaa;
+    }
+
+    .context-menu > div{
+            padding: 10px;
+            background: #eee;
+            border-bottom: solid 1px #aaa;
+            font-size: 11pt;
+            cursor:pointer;
+        }
+
+        .context-menu > div:hover{
+            background:#fff;
+        }
+
+        .context-menu.show{
+            display:block;
+        }
+</style>
+
+
+<html>
+    <body>
+        <h1>ariel trys again 138.0</h1>
+
+
+        <!--try to create a custom context menu -->
+
+        <div class='context-menu' id='context1'></div>
+
+
+
+
+        <div id="divError" style="display: none"></div>
+        <button onclick="requestConsent()" id="consent" >Authenticate</button>
+
+   <!--       <form method="POST">
+
+            <label for="parseValue">Value to parse:</label><br>
+            <input type="text" id="parseValue" name="value" value="Default value">
+            <br/>
+         <!-- <input type="submit" onclick = "parseQuery()" value = "submit any values" />
+
+        </form>
+        -->  
+   
+        <!--Putting room to test out functions -->
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <form>
+
+            <label for="cookieValue">Cookie value:</label><br>
+            <input type="text" id="cookieValue" name="cookie" value="Default value">
+            <br/>
+            <input type="submit" onclick = "setCookie()" value = "submit cookie value" />
+
+        </form>
+
+
+
+        <!--put some space between these buttons-->
+
+        <p></p>
+
+        <br/>
+        <br/>
+        <br/>
+
+
+
+
+        <button onclick ="showCookie()">Show cookie!!</button> 
+
+        <br />
+        <br />
+        <br />
+
+        <button onclick ="deepLink()"> get context! </button> 
+        <br />
+        <br />
+        <br />
+
+        <button onclick ="getDeepLink()"> Get deep link! </button> 
+
+        <br />
+        <br />
+        <br />
+
+        <button onclick ="sendInfo()"> Get link! </button> 
+
+        <br />
+        <br />
+        <br />
+
+        <button onclick ="triggerDeepLink()"> Trigger a deep link </button> 
+        <p id ="testDeepLink"> </p>
+        <br />
+
+        <br />
+
+
+        <button onclick ="callMeSearch()"> Search for /me </button>
+        <br />
+        <br />
+        <p id ="testCallSearch"> </p>
+        <p id ="testLink"> </p>
+        <br />
+
+        <form>
+
+            <label for="searchValue">Search value:</label><br>
+     
+            <input type="text" id="searchValue" value="me">
+            <br/>
+            <input type="submit" onclick = "callMeSearch()" value = "search value" />
+
+        </form>
+        <br />
+        <br />
+
+        
+        <!--<button onclick ="writeToPath()"> write to log file </button>-->
+        <br />
+        <br />
+
+        <a href = "https://teams.microsoft.com/l/entity/afac9d47-ca7c-4e53-a6b8-552393fc11c3/_djb2_msteams_prefix_2655113636?label=Deep+link+in+Auth"> deep link test </a>
+
+
+
+    <button id ="tryClick">try clicking me :)</button> 
+    <br />
+    <p id ="test">jdfk ekfjewklf ewjfkweg ewgbhiwe beiwohbwlkjal;ksvj slbhirob irobhriwlbhekl gbwejbnwkhweilb sbkslbh siflkbhsiolbhel e</p> 
+
+    <p id="getSelectionText"></p>
+    
+    
+    
+    
+    
+    <!--button onclick ="setCookie('name', 'new value1', '30')"> Create a cookie! </button> 
+
+
+
+        <button onclick ="deleteCookie('name', 'new value1')">DELETE COOKIE! </button>
+        -->
+
+        
+    
+    
+    <div id="divGraphProfile" style="display: none"></div>
+
+
+
+    </body>   
+</html>
